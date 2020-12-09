@@ -1,14 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-public class GameManager : MonoBehaviour {
-    
-    public Text timeText;
-    private float time;
- 
-    private void Update () {
-        time += Time.deltaTime;
-        timeText.text = time.ToString ();
+using UnityEngine.SceneManagement;
+
+public class GameManager : MonoBehaviour
+{
+    public void LoadScene1()
+    {
+        SceneManager.LoadScene("Scene1");
     }
+    public void LoadScene2()
+    {
+        SceneManager.LoadScene("Scene2");
+    }
+    public void LoadScene3()
+    {
+        SceneManager.LoadScene("Scene3");
+    }
+    public void EndGame()
+    {
+        Application.Quit();
+    }
+
 }

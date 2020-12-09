@@ -9,6 +9,9 @@ TagManager:
   - Spear
   - Cannon
   - Boom
+  - projectile
+  - FxTemporaire
+  - Ouchie
   layers:
   - Default
   - TransparentFX
