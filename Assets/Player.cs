@@ -14,6 +14,12 @@ public class Player : MonoBehaviour
                 Destroy(other.gameObject);
                 hp.TakeDamage(10);
             break;    
-        }    
+        }
+        if (other.gameObject.GetComponent<Eatable>() == true)
+        {
+            GameObject.Destroy(other.gameObject);
+            EffectManager.instance.DoNom(other.transform.position);
+            hp.health += 20;
+        }
     }
 }
