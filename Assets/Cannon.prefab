@@ -78,12 +78,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tfGunBody: {fileID: 4945103179220484509}
-  m_range: 10
+  m_range: 100
   m_layerMask:
     serializedVersion: 2
     m_Bits: 256
   m_spinSPeed: 100
-  m_fireRate: 1
+  m_fireRate: 2
   m_firepos: {fileID: 1495963856293877255}
   fire_effect: {fileID: 100006, guid: 2e7e92bc7175b744ea40878dedfa79e4, type: 3}
   Bullet: {fileID: 7376466318706945265, guid: 65bdef88c0c26b94bb064fa80222bff5, type: 3}

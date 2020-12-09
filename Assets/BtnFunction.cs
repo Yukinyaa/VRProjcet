@@ -48,9 +48,11 @@ public class BtnFunction : MonoBehaviour
 
     void DoLoadScene()
     {
+        foreach (GameObject o in Object.FindObjectsOfType<GameObject>())
+        {
+            Destroy(o);
+        }
         SceneManager.LoadScene(arg_str);
-
-
     }
     // Start is called before the first frame update
     void Start()

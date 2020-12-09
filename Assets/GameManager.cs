@@ -5,21 +5,46 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public void LoadScene1()
+    bool ui = false;
+    [SerializeField]
+    GameObject uwinPF, ulosePF;
+    [SerializeField]
+    GameObject uwinUI;
+    public void Update()
     {
-        SceneManager.LoadScene("Scene1");
+        int enemyCount = FindObjectsOfType<Enemy>().Length;
+        enemyCount += FindObjectsOfType<Cannon>().Length;
+
+        if ((enemyCount == 0) && (ui == false))
+        {
+            ui = true;
+            StartCoroutine(UWin());
+        }
+        if ((FindObjectOfType<Healthbar>().health <= 0) && (ui == false))
+        {
+            ui = true;
+            StartCoroutine(ULose());
+        }
     }
-    public void LoadScene2()
+
+    IEnumerator ULose()
     {
-        SceneManager.LoadScene("Scene2");
+        ulosePF.SetActive(true);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("StartScene");
     }
-    public void LoadScene3()
+    IEnumerator UWin()
     {
-        SceneManager.LoadScene("Scene3");
-    }
-    public void EndGame()
-    {
-        Application.Quit();
+        Instantiate(uwinPF, transform.position, Quaternion.identity);
+        uwinUI.SetActive(true);
+        yield return new WaitForSeconds(3);
+        Destroy(this.gameObject);
+        foreach (GameObject o in Object.FindObjectsOfType<GameObject>())
+        {
+            Destroy(o);
+        }
+        SceneManager.LoadScene("StartScene");
+        
     }
 
 }

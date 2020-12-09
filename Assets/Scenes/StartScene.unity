@@ -133,9 +133,9 @@ GameObject:
   - component: {fileID: 423525288}
   - component: {fileID: 423525287}
   - component: {fileID: 423525286}
-  - component: {fileID: 423525289}
-  - component: {fileID: 423525290}
   - component: {fileID: 423525291}
+  - component: {fileID: 423525290}
+  - component: {fileID: 423525289}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -273,13 +273,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 423525284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e25b97bc7f8c028438fa15ca486a2bfc, type: 3}
+  m_Script: {fileID: 11500000, guid: d0a64810f80b547428c3cb6414b74071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 3
+  function: 4
   arg_int: 0
   arg_str: 
-  arg_transform: {fileID: 493873925}
+  arg_transform: {fileID: 2021855876}
 --- !u!114 &423525290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,13 +289,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 423525284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e25b97bc7f8c028438fa15ca486a2bfc, type: 3}
+  m_Script: {fileID: 11500000, guid: d0a64810f80b547428c3cb6414b74071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 4
+  function: 3
   arg_int: 0
   arg_str: 
-  arg_transform: {fileID: 2021855876}
+  arg_transform: {fileID: 493873925}
 --- !u!65 &423525291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -421,13 +421,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 489325806}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4056bd6782ef01c47977a3fc247ae3c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 42e8b73f4a1aec4428076e3b54f74d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_defaultLength: 1000
+  m_defaultLength: 500
   m_TargetSource: 1
   m_ClickAction:
-    actionPath: /actions/default/in/GrabPinch
+    actionPath: /actions/default/in/InteractUI
     needsReinit: 0
 --- !u!1 &493873924
 GameObject:
@@ -735,7 +735,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1017931956}
-  - component: {fileID: 1017931955}
   m_Layer: 0
   m_Name: GameMgr
   m_TagString: Untagged
@@ -743,18 +742,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1017931955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1017931954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f7a921cc9e7acd4d85aa3ddc611310c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1017931956
 Transform:
   m_ObjectHideFlags: 0
@@ -823,6 +810,10 @@ PrefabInstance:
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465950, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: allowToggleTo2D
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
@@ -1061,7 +1052,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1017931955}
+      - m_Target: {fileID: 0}
         m_MethodName: LoadScene1
         m_Mode: 1
         m_Arguments:
@@ -1118,10 +1109,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1330478811}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e25b97bc7f8c028438fa15ca486a2bfc, type: 3}
+  m_Script: {fileID: 11500000, guid: d0a64810f80b547428c3cb6414b74071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 2
+  function: 1
   arg_int: 0
   arg_str: Stage1
   arg_transform: {fileID: 0}
@@ -1368,10 +1359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25b97bc7f8c028438fa15ca486a2bfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 4
-  arg_int: 0
-  arg_str: 
-  arg_transform: {fileID: 493873925}
 --- !u!114 &1449044459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1384,10 +1371,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25b97bc7f8c028438fa15ca486a2bfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 3
-  arg_int: 0
-  arg_str: 
-  arg_transform: {fileID: 2021855876}
 --- !u!65 &1449044460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1484,7 +1467,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1017931955}
+      - m_Target: {fileID: 0}
         m_MethodName: EndGame
         m_Mode: 1
         m_Arguments:
@@ -1541,7 +1524,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1738767681}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e25b97bc7f8c028438fa15ca486a2bfc, type: 3}
+  m_Script: {fileID: 11500000, guid: d0a64810f80b547428c3cb6414b74071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   function: 5
@@ -1644,7 +1627,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1017931955}
+      - m_Target: {fileID: 0}
         m_MethodName: LoadScene3
         m_Mode: 1
         m_Arguments:
@@ -1701,10 +1684,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1776191595}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e25b97bc7f8c028438fa15ca486a2bfc, type: 3}
+  m_Script: {fileID: 11500000, guid: d0a64810f80b547428c3cb6414b74071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 2
+  function: 1
   arg_int: 0
   arg_str: Stage3
   arg_transform: {fileID: 0}
@@ -1804,7 +1787,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1017931955}
+      - m_Target: {fileID: 0}
         m_MethodName: LoadScene2
         m_Mode: 1
         m_Arguments:
@@ -1861,10 +1844,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1804050564}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e25b97bc7f8c028438fa15ca486a2bfc, type: 3}
+  m_Script: {fileID: 11500000, guid: d0a64810f80b547428c3cb6414b74071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 2
+  function: 1
   arg_int: 0
   arg_str: Stage2
   arg_transform: {fileID: 0}

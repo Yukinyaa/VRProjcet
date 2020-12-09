@@ -5,18 +5,16 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] Healthbar hp = null;
-    [SerializeField] bool isHead = false;
-    private void OnTriggerEnter(Collider other)
+    // Start is called before the first frame update
+    void OnTriggerEnter(Collider other)
     {
         switch(other.gameObject.tag)
         {
             case "Boom" :
                 Destroy(other.gameObject);
                 hp.TakeDamage(10);
-                EffectManager.instance.DoOuche(this.transform.position);
             break;    
         }
-        if(isHead == true)
         if (other.gameObject.GetComponent<Eatable>() == true)
         {
             GameObject.Destroy(other.gameObject);

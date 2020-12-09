@@ -12,6 +12,7 @@ TagManager:
   - projectile
   - FxTemporaire
   - Ouchie
+  - Sea
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - 
   - 
   - Player
-  - Enemy
+  - Sea
   - 
   - 
   - 

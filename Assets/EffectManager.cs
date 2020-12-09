@@ -4,7 +4,7 @@ internal class EffectManager : MonoBehaviour
 {
     static public EffectManager instance;
     [SerializeField]
-    GameObject nompf, xplosionpf, ouchepf;
+    GameObject nompf, xplosionpf;
     private void Start()
     {
         instance = this;
@@ -13,11 +13,7 @@ internal class EffectManager : MonoBehaviour
     {
         Instantiate(nompf, pos, Quaternion.identity);
     }
-    public void DoOuche(Vector3 pos)
-    {
-        Instantiate(nompf, pos, Quaternion.identity);
-    }
-    public void DoXPlosion(Vector3 pos)
+    public void XPlosion(Vector3 pos)
     {
         Instantiate(xplosionpf, pos, Quaternion.identity);
     }

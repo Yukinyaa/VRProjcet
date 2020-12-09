@@ -12,7 +12,7 @@ public class nohand : MonoBehaviour
     {
        if(gameObject.tag == "Enemy")
        {
-            radian+=0.05f;
+            radian += 0.05f;
        }
        else if(gameObject.tag == "Sword")
        {
