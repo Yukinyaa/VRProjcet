@@ -41,6 +41,10 @@ public class MyInteractable : MonoBehaviour
             NavMeshAgent n = GetComponent<NavMeshAgent>();
             if (n != null)
                 n.enabled = false;
+            nohand nh = GetComponent<nohand>();
+            if (nh != null)
+                nh.enabled = false;
+
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         }
         

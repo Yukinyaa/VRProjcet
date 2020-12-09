@@ -52,8 +52,7 @@ public class Enemy : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         if(velocity > 1.5f)
-        //if(velocity > 0f)
-            {
+        {
             switch(other.gameObject.tag)
             {
                 case "Enemy" :
